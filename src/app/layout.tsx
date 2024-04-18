@@ -21,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={inter.variable} lang="pt">
-      <body className="bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 text-zinc-50 antialiased">{children}</body>
+      <body className="bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 text-zinc-50 antialiased">
+        {children}
+      </body>
     </html>
   )
 }
