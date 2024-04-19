@@ -1,0 +1,21 @@
+name: Run E2E tests
+
+on: push
+
+jobs:
+  cypress-run:
+    runs-on: windows10-22h2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
