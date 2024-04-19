@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run build
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
