@@ -3,7 +3,7 @@ name: Run E2E tests
 on: push
 
 jobs:
-  cypress-run:
+  build:
     runs-on: windows10-22h2
     steps:
       - name: Checkout
@@ -13,3 +13,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+      - run: npm ci
+      - run: npm run build
